@@ -36,7 +36,7 @@ h1,h2
 
 
 
-.work
+#work
 {
     width: 250px;
     height: 250px;
@@ -59,48 +59,36 @@ h1,h2
     margin-left: 25%;
     margin-right: 25%;
 }
-
-#overlays
-{ 
-    text-align: center;
-    width: 50%;
-    height: 50%;
-    display: inline-block;
-    margin-left: 25%;
-}
-
-#overlay
+.overlay
 {
-    position: absolute;
+    position: relative;
+    top: 250px;
     width: 250px;
     height: 250px;
-    z-index: 3;
     transition: 0.5s;
-    display: inline-block;
+    background-color:rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    z-index: 3;
 }
 
-#overlay-text
+.overlay-text
 {
-    text-align: center;
     color: white;
+    text-align: center;
     position: absolute;
-    right: 15%;
-    bottom: 15%;
-    left: 15%;
-    top: 15%;
-    transition: 0.5s;
+    top: 25%;
+    bottom: 25%;
+    right: 25%;
+    left: 25%;
+    border: 2px solid white;
     padding-top: 25%;
     padding-bottom: 25%;
-    opacity: 0;
-    border: 2px solid white;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-#overlay:hover
-{
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-#overlay:hover #overlay-text
+.overlay:hover 
 {
     opacity: 1;
 }
+
